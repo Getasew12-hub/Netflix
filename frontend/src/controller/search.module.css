@@ -1,0 +1,24 @@
+.contaner{
+    height:270px;
+    width:100%;
+    overflow:hidden;
+    border-radius:5px;
+    margin-bottom:10px;
+    padding:10px;
+    background:rgb(26, 41, 57);
+    box-sizing:border-box;
+    position:relative;
+}
+
+.contaner + div >img{
+     object-fit:cover;
+     height:100%;
+     max-width:250px;
+     border-radius:5px;
+}
+
+@media (max-width:500px) {
+    .contaner{
+        height:200px;
+    }
+}

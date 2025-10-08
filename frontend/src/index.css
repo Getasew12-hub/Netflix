@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: black;
+}
+.hero-bg{
+    background-image:linear-gradient(rgb(0,0,0,0.8),rgb(0,0,0,0.1)),url(./hero.png);
+    height: 100vh;
+}
+
+.loader{
+    animation: loader 0.5s linear infinite;
+    color: palevioletred;
+    
+}
+.load{
+    animation: loader 0.5s linear infinite; 
+}
+@keyframes loader {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+.shimmereffect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,rgb(4, 24, 43),rgb(36, 46, 55),rgb(4, 24, 43),rgb(4, 24, 43));
+    background-size: 200% 100%;
+
+    animation: shimer 0.8s linear infinite;
+}
+
+@keyframes shimer {
+    from{
+    background-position: 100% 0%;
+    }to{
+        background-position: -100% 0;
+    }
+}

@@ -1,0 +1,73 @@
+.navigations{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   margin: 15px 0 10px;
+
+}
+.searchcontainer{
+    min-height: 100vh;
+}
+.item{
+    padding: 0 10px;
+}
+.navigations >button{
+    padding: 10px 15px;
+    border-radius: 4px;
+    background: rgb(26, 41, 57);
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.searchcontainer >.item> form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width:500px ;
+    margin: 20px auto;
+    gap: 10px;
+
+}
+.searchcontainer >.item> form > button{
+   width: min-content;
+   height: 35px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-sizing: border-box;
+}
+.searchcontainer >.item> form > input{
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: rgb(26, 41, 57);
+    font-size: 17px;
+    border: 1px solid rgb(26, 41, 57);
+    color: white;
+}
+
+.posters{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 20px;
+    text-align: center;
+    max-width: 1300px;
+    margin: 25px auto;
+    box-sizing: border-box;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width:500px) {
+    .posters{
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr)); 
+        
+    }
+}

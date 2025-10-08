@@ -1,0 +1,91 @@
+ header{
+    max-width: 1200px;
+      padding: 15px 0;
+    box-sizing: border-box;
+    margin: 0px auto ;
+    position: relative;
+    z-index: 1000;
+   
+ }
+ .component{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    position: relative;
+    z-index: 50;
+    overflow: hidden;
+   
+  
+}
+.homeleft img{
+    width: 200px;
+
+}
+.homeright img{
+    height: 30px;
+}
+.homeright a,.homeleft a{
+    text-decoration: none;
+    color: white;
+}
+.homeright,.homeleft{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+.mobileshow a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+    
+}
+.mobileshow{
+    padding: 0 10px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(128, 128, 128,0.5);
+    margin: 0 10px;
+   animation: tranfrom 0.5s linear forwards;
+   transform: translateY(-40px);
+   position: absolute;
+   left: 0;
+   right: 5px;
+   
+   width: 95%;
+   background: rgb(7, 7, 7,0.4);
+   box-sizing: border-box;
+  
+   
+   
+}
+
+@keyframes tranfrom {
+    to{
+        transform: translateY(0);
+    }
+}
+
+@media (max-width:700px) {
+    .component{
+        background: black;
+    }
+}
+@media (max-width:650px) {
+    .homeleft > a > img{
+         width: 150px;
+    }
+    .component{
+        align-items: flex-start;
+    }
+}
+@media (max-width:500px) {
+    .homeleft > a > img{
+    width: 100px;
+    }
+    .homeright >img{
+    height: 25px;
+}
+}

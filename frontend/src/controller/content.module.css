@@ -1,0 +1,150 @@
+.contents{
+    display: flex;
+   /* position: relative; */
+    gap: 10px;
+    transition: 0.5s linear;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+.contents::-webkit-scrollbar{
+    display: none;
+    width: 0;
+}
+.contents:hover + .forwardarrow ,.contents:hover + .forwardarrow + .backarrow{
+  visibility: visible;
+}
+.contentitem{
+    height: auto !important;
+    overflow: hidden;
+    flex-shrink: 0;
+    width:230px ;
+}
+.contentloader{
+    display: flex;
+    gap: 10px;
+   
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+.tumbnale{
+    width: 100%;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.tumbnale > img{
+   height: 100%;
+   width: 100%;
+    object-fit: cover;
+}
+.loaderitem{
+  
+    flex-shrink: 0;
+    background: linear-gradient(to right ,rgb(10, 23, 37) 0%,rgb(33, 34, 38) ,rgb(10, 23, 37));
+    background-size: 200% 100%;
+    width: 200px;
+    height: 170px;
+    border-radius: 5px;
+
+    animation: loader 0.8s linear infinite;
+}
+.textload{
+   background: linear-gradient(to right ,rgb(10, 23, 37) 0%,rgb(33, 34, 38) ,rgb(10, 23, 37));
+    background-size: 200% 100%; 
+    display: block; 
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 50px;
+}
+@keyframes loader {
+    from{
+        background-position: 100% 0%;
+    }to{
+       background-position: -100% 0%; 
+    }
+}
+.main{
+   margin-top: 20px;
+   position:relative;
+   overflow: hidden;
+}
+.forwardarrow ,.backarrow{
+  position: absolute;
+  right: 5px;
+  top: 30%;
+  background: rgb(12, 12, 12,0.5);
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  visibility: hidden;
+}
+.forwardarrow:hover ,.backarrow:hover{
+    visibility: visible;
+}
+.backarrow{
+    left: 5px;
+}
+.title{
+    margin: 10px 0;
+}
+@media (max-width:850px) {
+        .tumbnale{
+        height: 150px;
+    }
+    .contentitem{
+         
+    
+    width:200px ;
+    }
+    .loaderitem{
+  
+    width: 200px;
+    height: 150px;
+}
+}
+@media (max-width:650px) {
+    
+      .tumbnale{
+        height: 100px;
+    }
+    .contentitem{
+     
+    
+    width:170px ; 
+    }
+        .loaderitem{
+  
+    width: 170px;
+    height: 130px;
+}
+}
+
+@media (max-width:500px) {
+    .contentitem > p{
+        font-size: 13px;
+    }
+  .title{
+    font-size:17px ;
+  }
+    .tumbnale{
+        height: 80px;
+    }
+    .contentitem{
+       
+    
+    width:150px ; 
+    }
+
+        .loaderitem{
+  
+    width: 150px;
+    height: 100px;
+}
+}
