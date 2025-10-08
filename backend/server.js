@@ -6,6 +6,7 @@ import searchRouter from "./routers/search.router.js"
 import { ENV_VARS } from "./config/envVars.js";
 import cookieParser from "cookie-parser";
 import path from "path"
+import cron from "./cron.js"
 const __dirname=path.resolve()
 
 import env from "dotenv";
@@ -20,7 +21,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json())
 app.use(cookieParser())
 
-
+cron.start()
 app.use('/api/auth',authRouter)
 app.use('/api/movies',protectedRouter,moviesRouter)
 app.use('/api/tv',protectedRouter,tvRouter)
