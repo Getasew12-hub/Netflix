@@ -18,7 +18,7 @@ function searchResult({activetab,val}) {
 
         {loadding && <div className='shimmereffect'/>}
 
-            <img src={ORGINAL_IMG+val.poster_path} alt={val.title} onLoad={ handleLoad} className={clasess.searchposter} />
+         <img src={ORGINAL_IMG+val.poster_path} alt={val.title} onLoad={ handleLoad} className={clasess.searchposter} />
             </div>
             <p>{val.title} </p>
         </div></Link>
